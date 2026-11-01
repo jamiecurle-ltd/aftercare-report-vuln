@@ -43,7 +43,7 @@ jobs:
       - name: Start the fake Aftercare
         run: |
           node test/fake-aftercare.mjs 8811 aft_test "$RUNNER_TEMP/aftercare.log" &
-          for i in $(seq 20); do curl -s -o /dev/null http://127.0.0.1:8811/ && break; sleep 0.5; done
+          for i in $(seq 20); do curl -sf -o /dev/null http://127.0.0.1:8811/health && break; sleep 0.5; done
 
       - name: npm lockfile
         uses: ./
@@ -107,7 +107,7 @@ jobs:
       - name: Start the fake Aftercare
         run: |
           node test/fake-aftercare.mjs 8811 aft_test "$RUNNER_TEMP/aftercare.log" &
-          for i in $(seq 20); do curl -s -o /dev/null http://127.0.0.1:8811/ && break; sleep 0.5; done
+          for i in $(seq 20); do curl -sf -o /dev/null http://127.0.0.1:8811/health && break; sleep 0.5; done
       # Run from the project, as a real Elixir repo's workflow would.
       - name: Hex lockfile, with retired packages
         uses: ./

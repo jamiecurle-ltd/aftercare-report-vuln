@@ -15,6 +15,8 @@ createServer((req, res) => {
   let body = '';
   req.on('data', (chunk) => { body += chunk; });
   req.on('end', () => {
+    // The workflow's "is it up yet?" probe: answered, never logged.
+    if (req.url === '/health') { res.writeHead(200); res.end('ok'); return; }
     let status = 204, report = null, why = [];
     if (req.method !== 'POST' || req.url !== '/ingest/vulns') status = 404;
     else if (req.headers.authorization !== `Bearer ${token}`) status = 401;
