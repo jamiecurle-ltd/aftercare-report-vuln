@@ -68,6 +68,8 @@ elif [[ ${HEX_RETIRED:-false} == true ]]; then
 fi
 
 payload=$(node "$here/build.mjs" "$dir" "$run_url" "$commit") || exit 1
+# Never send an empty body: that's a bug here, not a report.
+if [[ -z $payload ]]; then echo "::error::build.mjs produced no report"; exit 1; fi
 echo "Reporting to Aftercare: $(node -e 'const r = JSON.parse(process.argv[1]); console.log(r.status + ",", r.findings.length, "findings")' "$payload")"
 
 # The token goes in a header read from a file descriptor, so it never appears

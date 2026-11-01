@@ -1,7 +1,8 @@
 name: Test
 
 # Every push and PR: the report builder's unit tests, then the action itself,
-# run for real (uses: ./) on Linux x64, Linux arm64 and macOS against a
+# run for real (uses: ./) on Linux x64, Linux arm64 and macOS, and the way a
+# Forgejo runner runs it (in a Debian container, from /var/run/act), against a
 # stand-in Aftercare (test/fake-aftercare.mjs) that checks each report the way
 # the real one does. Nothing here talks to the real Aftercare.
 #
@@ -120,3 +121,36 @@ jobs:
         run: |
           node test/check-log.mjs "$RUNNER_TEMP/aftercare.log" 204:vulnerable:8
           grep -q '"RETIRED-hackney"' "$RUNNER_TEMP/aftercare.log"
+
+  # Forgejo's runner (act) runs a job in the job's container and puts actions
+  # under /var/run/act/actions/..., where /var/run is a symlink to /run. GitHub
+  # does neither, so this copies the action there and runs report.sh the way
+  # action.yml does, in the Debian image a Forgejo docker runner typically uses.
+  forgejo-style:
+    name: The action as Forgejo runs it (Debian container)
+    needs: unit
+    runs-on: ubuntu-24.04
+    container: debian:trixie-slim@sha256:f6b08b09a05725f9431502d3b5714f5c4576e82c1a84fa1debe0c24a7e0c3ec4
+    steps:
+      # Before checkout: the same packages the README asks a Forgejo image for.
+      - name: Install what the action needs
+        run: apt-get update -qq && apt-get install -y -qq nodejs curl ca-certificates >/dev/null
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Put the action where Forgejo would
+        run: |
+          test -L /var/run
+          mkdir -p /run/act/actions/aftercare
+          cp -r . /run/act/actions/aftercare/
+      - name: Start the fake Aftercare
+        run: |
+          node test/fake-aftercare.mjs 8811 aft_test /tmp/aftercare.log &
+          for i in $(seq 20); do curl -sf -o /dev/null http://127.0.0.1:8811/health && break; sleep 0.5; done
+      - name: npm lockfile, run from /var/run/act
+        shell: bash
+        env:
+          AFTERCARE_TOKEN: aft_test
+          LOCKFILES: test/fixtures/npm/package-lock.json
+          AFTERCARE_URL: http://127.0.0.1:8811
+        run: /var/run/act/actions/aftercare/report.sh
+      - name: Check what Aftercare received
+        run: node test/check-log.mjs /tmp/aftercare.log 204:vulnerable:6
