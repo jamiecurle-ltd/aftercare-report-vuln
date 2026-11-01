@@ -1,0 +1,2545 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "mix.lock",
+        "type": "lockfile"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "hackney",
+            "version": "1.6.4",
+            "ecosystem": "Hex",
+            "purl": "pkg:hex/hackney@1.6.4",
+            "commit": "6363480405ae4b1d03d6233f32792f0c3cf765396cfdb7e1d07cab3d3e41c53c"
+          },
+          "groups": [
+            {
+              "ids": [
+                "EEF-CVE-2026-47069",
+                "GHSA-mp55-p8c9-rfw2"
+              ],
+              "aliases": [
+                "CVE-2026-47069",
+                "EEF-CVE-2026-47069",
+                "GHSA-mp55-p8c9-rfw2"
+              ],
+              "max_severity": "2.1"
+            },
+            {
+              "ids": [
+                "EEF-CVE-2026-47071",
+                "GHSA-gp9c-pm5m-5cxr"
+              ],
+              "aliases": [
+                "CVE-2026-47071",
+                "EEF-CVE-2026-47071",
+                "GHSA-gp9c-pm5m-5cxr"
+              ],
+              "max_severity": "8.2"
+            },
+            {
+              "ids": [
+                "EEF-CVE-2026-47075",
+                "GHSA-j9wq-vxxc-94wf"
+              ],
+              "aliases": [
+                "CVE-2026-47075",
+                "EEF-CVE-2026-47075",
+                "GHSA-j9wq-vxxc-94wf"
+              ],
+              "max_severity": "6.8"
+            },
+            {
+              "ids": [
+                "EEF-CVE-2026-47076",
+                "GHSA-pj7v-xfvx-wmjq"
+              ],
+              "aliases": [
+                "CVE-2026-47076",
+                "EEF-CVE-2026-47076",
+                "GHSA-pj7v-xfvx-wmjq"
+              ],
+              "max_severity": "6.9"
+            },
+            {
+              "ids": [
+                "GHSA-9fm9-hp7p-53mf"
+              ],
+              "aliases": [
+                "CVE-2025-3864",
+                "GHSA-9fm9-hp7p-53mf"
+              ],
+              "max_severity": "2.3"
+            },
+            {
+              "ids": [
+                "GHSA-vq52-99r9-h5pw"
+              ],
+              "aliases": [
+                "CVE-2025-1211",
+                "GHSA-vq52-99r9-h5pw"
+              ],
+              "max_severity": "6.5"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://cna.erlef.org/osv/EEF-CVE-2026-47069.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "hackney",
+                    "purl": "pkg:hex/hackney"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.9.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.15.0",
+                    "0.15.2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.16.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.23.0",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.25.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.5.6",
+                    "1.5.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.8.6",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "2.0.1",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.2.0",
+                    "3.2.1",
+                    "4.0.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://cna.erlef.org/osv/EEF-CVE-2026-47069.json"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "602d5c7f2ea4acbc83ed75230655d935a0750ebc"
+                        },
+                        {
+                          "fixed": "8e02b99c28aea1b3fa2ddc0e66f51fe5bb0ac540"
+                        }
+                      ],
+                      "repo": "https://github.com/benoitc/hackney",
+                      "type": "GIT"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0",
+                    "3.2.1",
+                    "3.2.0",
+                    "3.1.2",
+                    "3.1.1",
+                    "3.1.0",
+                    "3.0.3",
+                    "3.0.2",
+                    "3.0.1",
+                    "2.0.1",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "1.25.0",
+                    "1.24.1",
+                    "1.24.0",
+                    "1.23.0",
+                    "1.22.0",
+                    "1.21.0",
+                    "1.20.1",
+                    "1.20.0",
+                    "1.19.1",
+                    "1.19.0",
+                    "1.18.2",
+                    "1.18.1",
+                    "1.18.0",
+                    "1.17.4",
+                    "1.17.3",
+                    "1.17.2",
+                    "v1.17.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.16.0",
+                    "0.16.0",
+                    "1.15.2",
+                    "1.15.1",
+                    "1.15.0",
+                    "1.14.3",
+                    "1.14.2",
+                    "1.14.0",
+                    "1.13.0",
+                    "1.12.1",
+                    "1.12.0",
+                    "1.11.0",
+                    "1.10.1",
+                    "1.10.0",
+                    "1.9.0",
+                    "1.8.6",
+                    "1.8.5",
+                    "1.8.4",
+                    "1.8.3",
+                    "1.8.2",
+                    "1.8.0",
+                    "1.7.1",
+                    "1.7.0",
+                    "1.6.6",
+                    "1.6.5",
+                    "1.6.4",
+                    "1.6.3",
+                    "1.6.2",
+                    "1.6.1",
+                    "1.6.0",
+                    "1.5.7",
+                    "1.5.6",
+                    "1.5.5",
+                    "1.5.4",
+                    "1.5.1",
+                    "1.5.0",
+                    "1.4.10",
+                    "1.4.9",
+                    "1.4.8",
+                    "1.4.7",
+                    "1.4.6",
+                    "1.4.5",
+                    "1.4.4",
+                    "1.4.3",
+                    "1.4.2",
+                    "1.4.1",
+                    "1.4.0",
+                    "1.3.2",
+                    "1.3.1",
+                    "1.3.0",
+                    "1.2.0",
+                    "1.1.0",
+                    "1.0.6",
+                    "1.0.5",
+                    "1.0.4",
+                    "1.0.3",
+                    "1.0.2",
+                    "1.0.1",
+                    "1.0.0",
+                    "0.15.2",
+                    "0.15.1",
+                    "0.15.0",
+                    "0.14.3",
+                    "0.14.2",
+                    "0.14.1",
+                    "0.14.0",
+                    "0.13.1",
+                    "0.13.0",
+                    "0.12.1",
+                    "0.12.0",
+                    "0.11.2",
+                    "0.11.1",
+                    "0.11.0",
+                    "0.10.1",
+                    "0.10.0",
+                    "0.9.1",
+                    "0.9.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-47069",
+                "GHSA-mp55-p8c9-rfw2"
+              ],
+              "credits": [
+                {
+                  "name": "Peter Ullrich",
+                  "type": "FINDER"
+                },
+                {
+                  "name": "Benoit Chesneau",
+                  "type": "REMEDIATION_DEVELOPER"
+                },
+                {
+                  "name": "Jonatan Männchen / EEF",
+                  "type": "ANALYST"
+                }
+              ],
+              "database_specific": {
+                "capec_ids": [
+                  "CAPEC-34"
+                ],
+                "cpe_ids": [
+                  "cpe:2.3:a:benoitc:hackney:*:*:*:*:*:*:*:*"
+                ],
+                "cwe_ids": [
+                  "CWE-93"
+                ]
+              },
+              "details": "## Summary\n\nImproper Neutralization of CRLF Sequences ('CRLF Injection') vulnerability in benoitc hackney allows HTTP Response Splitting. The hackney\\_cookie:setcookie/3 function in src/hackney\\_cookie.erl validates the Name and Value arguments against CRLF and control characters, but concatenates the domain and path options verbatim into the output iolist with no equivalent check. An attacker who controls either option — for example by supplying a Host header value forwarded as the cookie domain, or a request path forwarded as the cookie path — can inject a literal CRLF sequence and arbitrary additional Set-Cookie headers into the HTTP response.\n\nThis issue affects hackney: from 0.9.0 before 4.0.1.",
+              "id": "EEF-CVE-2026-47069",
+              "modified": "2026-07-30T18:22:10.096244Z",
+              "published": "2026-05-25T14:00:39.394Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/benoitc/hackney/security/advisories/GHSA-mp55-p8c9-rfw2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.erlef.org/cves/CVE-2026-47069.html"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/benoitc/hackney/commit/8e02b99c28aea1b3fa2ddc0e66f51fe5bb0ac540"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://hex.pm/packages/hackney"
+                }
+              ],
+              "schema_version": "1.7.5",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "CRLF injection in cookie domain/path options in hackney"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://cna.erlef.org/osv/EEF-CVE-2026-47071.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "hackney",
+                    "purl": "pkg:hex/hackney"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.10.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.15.0",
+                    "0.15.2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.16.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.23.0",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.25.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.5.6",
+                    "1.5.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.8.6",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "2.0.1",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.2.0",
+                    "3.2.1",
+                    "4.0.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://cna.erlef.org/osv/EEF-CVE-2026-47071.json"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "34cdbd1d20a282aacc286a89327465a3925b4c5d"
+                        },
+                        {
+                          "fixed": "5ccdab725c561a6f03d05a51f2d0664f98236dae"
+                        }
+                      ],
+                      "repo": "https://github.com/benoitc/hackney",
+                      "type": "GIT"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0",
+                    "3.2.1",
+                    "3.2.0",
+                    "3.1.2",
+                    "3.1.1",
+                    "3.1.0",
+                    "3.0.3",
+                    "3.0.2",
+                    "3.0.1",
+                    "2.0.1",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "1.25.0",
+                    "1.24.1",
+                    "1.24.0",
+                    "1.23.0",
+                    "1.22.0",
+                    "1.21.0",
+                    "1.20.1",
+                    "1.20.0",
+                    "1.19.1",
+                    "1.19.0",
+                    "1.18.2",
+                    "1.18.1",
+                    "1.18.0",
+                    "1.17.4",
+                    "1.17.3",
+                    "1.17.2",
+                    "v1.17.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.16.0",
+                    "0.16.0",
+                    "1.15.2",
+                    "1.15.1",
+                    "1.15.0",
+                    "1.14.3",
+                    "1.14.2",
+                    "1.14.0",
+                    "1.13.0",
+                    "1.12.1",
+                    "1.12.0",
+                    "1.11.0",
+                    "1.10.1",
+                    "1.10.0",
+                    "1.9.0",
+                    "1.8.6",
+                    "1.8.5",
+                    "1.8.4",
+                    "1.8.3",
+                    "1.8.2",
+                    "1.8.0",
+                    "1.7.1",
+                    "1.7.0",
+                    "1.6.6",
+                    "1.6.5",
+                    "1.6.4",
+                    "1.6.3",
+                    "1.6.2",
+                    "1.6.1",
+                    "1.6.0",
+                    "1.5.7",
+                    "1.5.6",
+                    "1.5.5",
+                    "1.5.4",
+                    "1.5.1",
+                    "1.5.0",
+                    "1.4.10",
+                    "1.4.9",
+                    "1.4.8",
+                    "1.4.7",
+                    "1.4.6",
+                    "1.4.5",
+                    "1.4.4",
+                    "1.4.3",
+                    "1.4.2",
+                    "1.4.1",
+                    "1.4.0",
+                    "1.3.2",
+                    "1.3.1",
+                    "1.3.0",
+                    "1.2.0",
+                    "1.1.0",
+                    "1.0.6",
+                    "1.0.5",
+                    "1.0.4",
+                    "1.0.3",
+                    "1.0.2",
+                    "1.0.1",
+                    "1.0.0",
+                    "0.15.2",
+                    "0.15.1",
+                    "0.15.0",
+                    "0.14.3",
+                    "0.14.2",
+                    "0.14.1",
+                    "0.14.0",
+                    "0.13.1",
+                    "0.13.0",
+                    "0.12.1",
+                    "0.12.0",
+                    "0.11.2",
+                    "0.11.1",
+                    "0.11.0",
+                    "0.10.1",
+                    "0.10.0",
+                    "0.9.1",
+                    "0.9.0",
+                    "0.8.3",
+                    "0.8.2",
+                    "0.8.1"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-47071",
+                "GHSA-gp9c-pm5m-5cxr"
+              ],
+              "credits": [
+                {
+                  "name": "Peter Ullrich",
+                  "type": "FINDER"
+                },
+                {
+                  "name": "Benoit Chesneau",
+                  "type": "REMEDIATION_DEVELOPER"
+                },
+                {
+                  "name": "Jonatan Männchen / EEF",
+                  "type": "ANALYST"
+                }
+              ],
+              "database_specific": {
+                "capec_ids": [
+                  "CAPEC-130"
+                ],
+                "cpe_ids": [
+                  "cpe:2.3:a:benoitc:hackney:*:*:*:*:*:*:*:*"
+                ],
+                "cwe_ids": [
+                  "CWE-400"
+                ]
+              },
+              "details": "## Summary\n\nUncontrolled Resource Consumption vulnerability in benoitc hackney allows Flooding. The SOCKS5 transport in src/hackney\\_socks5.erl correctly applies the caller-supplied timeout to the SOCKS5 negotiation phase, but then upgrades the connection to TLS using the two-argument form ssl:connect/2, which defaults to an infinite timeout. The Timeout value is in scope at the call site but is not forwarded. A hostile SOCKS5 proxy that completes the SOCKS5 handshake normally and then goes silent (or sends a partial TLS ServerHello and stalls) will cause the connecting process to block indefinitely, regardless of the connect\\_timeout or recv\\_timeout options supplied by the caller.\n\nThis issue affects hackney: from 0.10.0 before 4.0.1.",
+              "id": "EEF-CVE-2026-47071",
+              "modified": "2026-07-30T18:22:00.681770Z",
+              "published": "2026-05-25T14:00:41.112Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/benoitc/hackney/security/advisories/GHSA-gp9c-pm5m-5cxr"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.erlef.org/cves/CVE-2026-47071.html"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/benoitc/hackney/commit/5ccdab725c561a6f03d05a51f2d0664f98236dae"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://hex.pm/packages/hackney"
+                }
+              ],
+              "schema_version": "1.7.5",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "SOCKS5 TLS upgrade ignores caller timeout in hackney"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://cna.erlef.org/osv/EEF-CVE-2026-47075.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "hackney",
+                    "purl": "pkg:hex/hackney"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.13.1"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.15.0",
+                    "0.15.2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.16.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.23.0",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.25.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.5.6",
+                    "1.5.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.8.6",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "2.0.1",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.2.0",
+                    "3.2.1",
+                    "4.0.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://cna.erlef.org/osv/EEF-CVE-2026-47075.json"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "8bb1a359a81ae58567c84f8d24564e9742e6f2bd"
+                        },
+                        {
+                          "fixed": "ca73dd0aba0ed557449c18288bf07241671a43c9"
+                        }
+                      ],
+                      "repo": "https://github.com/benoitc/hackney",
+                      "type": "GIT"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0",
+                    "3.2.1",
+                    "3.2.0",
+                    "3.1.2",
+                    "3.1.1",
+                    "3.1.0",
+                    "3.0.3",
+                    "3.0.2",
+                    "3.0.1",
+                    "2.0.1",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "1.25.0",
+                    "1.24.1",
+                    "1.24.0",
+                    "1.23.0",
+                    "1.22.0",
+                    "1.21.0",
+                    "1.20.1",
+                    "1.20.0",
+                    "1.19.1",
+                    "1.19.0",
+                    "1.18.2",
+                    "1.18.1",
+                    "1.18.0",
+                    "1.17.4",
+                    "1.17.3",
+                    "1.17.2",
+                    "v1.17.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.16.0",
+                    "0.16.0",
+                    "1.15.2",
+                    "1.15.1",
+                    "1.15.0",
+                    "1.14.3",
+                    "1.14.2",
+                    "1.14.0",
+                    "1.13.0",
+                    "1.12.1",
+                    "1.12.0",
+                    "1.11.0",
+                    "1.10.1",
+                    "1.10.0",
+                    "1.9.0",
+                    "1.8.6",
+                    "1.8.5",
+                    "1.8.4",
+                    "1.8.3",
+                    "1.8.2",
+                    "1.8.0",
+                    "1.7.1",
+                    "1.7.0",
+                    "1.6.6",
+                    "1.6.5",
+                    "1.6.4",
+                    "1.6.3",
+                    "1.6.2",
+                    "1.6.1",
+                    "1.6.0",
+                    "1.5.7",
+                    "1.5.6",
+                    "1.5.5",
+                    "1.5.4",
+                    "1.5.1",
+                    "1.5.0",
+                    "1.4.10",
+                    "1.4.9",
+                    "1.4.8",
+                    "1.4.7",
+                    "1.4.6",
+                    "1.4.5",
+                    "1.4.4",
+                    "1.4.3",
+                    "1.4.2",
+                    "1.4.1",
+                    "1.4.0",
+                    "1.3.2",
+                    "1.3.1",
+                    "1.3.0",
+                    "1.2.0",
+                    "1.1.0",
+                    "1.0.6",
+                    "1.0.5",
+                    "1.0.4",
+                    "1.0.3",
+                    "1.0.2",
+                    "1.0.1",
+                    "1.0.0",
+                    "0.15.2",
+                    "0.15.1",
+                    "0.15.0",
+                    "0.14.3",
+                    "0.14.2",
+                    "0.14.1",
+                    "0.14.0",
+                    "0.13.1",
+                    "0.13.0",
+                    "0.12.1",
+                    "0.12.0",
+                    "0.11.2",
+                    "0.11.1",
+                    "0.11.0",
+                    "0.10.1",
+                    "0.10.0",
+                    "0.9.1",
+                    "0.9.0",
+                    "0.8.3",
+                    "0.8.2",
+                    "0.8.1",
+                    "0.8.0",
+                    "0.7.0",
+                    "0.6.1",
+                    "0.6.0",
+                    "0.5.0",
+                    "0.4.4",
+                    "0.4.3",
+                    "0.4.2",
+                    "0.4.1",
+                    "0.4.0",
+                    "0.3.2",
+                    "0.3.1",
+                    "0.3.0",
+                    "0.2.0",
+                    "0.1.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-47075",
+                "GHSA-j9wq-vxxc-94wf"
+              ],
+              "credits": [
+                {
+                  "name": "tepel-chen",
+                  "type": "FINDER"
+                },
+                {
+                  "name": "Benoit Chesneau",
+                  "type": "REMEDIATION_DEVELOPER"
+                },
+                {
+                  "name": "Jonatan Männchen / EEF",
+                  "type": "ANALYST"
+                }
+              ],
+              "database_specific": {
+                "capec_ids": [
+                  "CAPEC-105"
+                ],
+                "cpe_ids": [
+                  "cpe:2.3:a:benoitc:hackney:*:*:*:*:*:*:*:*"
+                ],
+                "cwe_ids": [
+                  "CWE-93"
+                ]
+              },
+              "details": "## Summary\n\nImproper Neutralization of CRLF Sequences vulnerability in benoitc hackney allows HTTP Request Splitting. hackney does not percent-encode carriage return (\\\\r) or line feed (\\\\n) characters in the URL query component before constructing the HTTP/1.1 request target. Characters outside the grammar defined in RFC 3986 Section 3.4 must be percent-encoded, but hackney\\_url:make\\_url/3 passes the query binary directly without validation or escaping. An attacker who can control all or part of a URL passed to hackney can inject raw CRLF sequences into the query string, which are then sent as HTTP line breaks in the request target. This enables injection of arbitrary HTTP headers or splitting of the HTTP request.\n\nThis issue affects hackney: from 0.13.1 before 4.0.1.",
+              "id": "EEF-CVE-2026-47075",
+              "modified": "2026-07-30T18:22:00.874489Z",
+              "published": "2026-05-25T14:00:45.781Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/benoitc/hackney/security/advisories/GHSA-j9wq-vxxc-94wf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.erlef.org/cves/CVE-2026-47075.html"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/benoitc/hackney/commit/ca73dd0aba0ed557449c18288bf07241671a43c9"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://hex.pm/packages/hackney"
+                }
+              ],
+              "schema_version": "1.7.5",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:A/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "CR/LF injection in query parameter in hackney"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://cna.erlef.org/osv/EEF-CVE-2026-47076.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "hackney",
+                    "purl": "pkg:hex/hackney"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.13.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.15.0",
+                    "0.15.2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.16.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.23.0",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.25.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.5.6",
+                    "1.5.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.8.6",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "2.0.1",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.2.0",
+                    "3.2.1",
+                    "4.0.0"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://cna.erlef.org/osv/EEF-CVE-2026-47076.json"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "4d725507588942fd00efca15b86da3273656510a"
+                        },
+                        {
+                          "fixed": "452620a92ec1da2e6b4862a049a2a4f04b42068f"
+                        }
+                      ],
+                      "repo": "https://github.com/benoitc/hackney",
+                      "type": "GIT"
+                    }
+                  ],
+                  "versions": [
+                    "4.0.0",
+                    "3.2.1",
+                    "3.2.0",
+                    "3.1.2",
+                    "3.1.1",
+                    "3.1.0",
+                    "3.0.3",
+                    "3.0.2",
+                    "3.0.1",
+                    "2.0.1",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "1.25.0",
+                    "1.24.1",
+                    "1.24.0",
+                    "1.23.0",
+                    "1.22.0",
+                    "1.21.0",
+                    "1.20.1",
+                    "1.20.0",
+                    "1.19.1",
+                    "1.19.0",
+                    "1.18.2",
+                    "1.18.1",
+                    "1.18.0",
+                    "1.17.4",
+                    "1.17.3",
+                    "1.17.2",
+                    "v1.17.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.16.0",
+                    "0.16.0",
+                    "1.15.2",
+                    "1.15.1",
+                    "1.15.0",
+                    "1.14.3",
+                    "1.14.2",
+                    "1.14.0",
+                    "1.13.0",
+                    "1.12.1",
+                    "1.12.0",
+                    "1.11.0",
+                    "1.10.1",
+                    "1.10.0",
+                    "1.9.0",
+                    "1.8.6",
+                    "1.8.5",
+                    "1.8.4",
+                    "1.8.3",
+                    "1.8.2",
+                    "1.8.0",
+                    "1.7.1",
+                    "1.7.0",
+                    "1.6.6",
+                    "1.6.5",
+                    "1.6.4",
+                    "1.6.3",
+                    "1.6.2",
+                    "1.6.1",
+                    "1.6.0",
+                    "1.5.7",
+                    "1.5.6",
+                    "1.5.5",
+                    "1.5.4",
+                    "1.5.1",
+                    "1.5.0",
+                    "1.4.10",
+                    "1.4.9",
+                    "1.4.8",
+                    "1.4.7",
+                    "1.4.6",
+                    "1.4.5",
+                    "1.4.4",
+                    "1.4.3",
+                    "1.4.2",
+                    "1.4.1",
+                    "1.4.0",
+                    "1.3.2",
+                    "1.3.1",
+                    "1.3.0",
+                    "1.2.0",
+                    "1.1.0",
+                    "1.0.6",
+                    "1.0.5",
+                    "1.0.4",
+                    "1.0.3",
+                    "1.0.2",
+                    "1.0.1",
+                    "1.0.0",
+                    "0.15.2",
+                    "0.15.1",
+                    "0.15.0",
+                    "0.14.3",
+                    "0.14.2",
+                    "0.14.1",
+                    "0.14.0",
+                    "0.13.1",
+                    "0.13.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-47076",
+                "GHSA-pj7v-xfvx-wmjq"
+              ],
+              "credits": [
+                {
+                  "name": "Ganbagana",
+                  "type": "FINDER"
+                },
+                {
+                  "name": "Benoit Chesneau",
+                  "type": "REMEDIATION_DEVELOPER"
+                },
+                {
+                  "name": "Jonatan Männchen / EEF",
+                  "type": "ANALYST"
+                }
+              ],
+              "database_specific": {
+                "capec_ids": [
+                  "CAPEC-664"
+                ],
+                "cpe_ids": [
+                  "cpe:2.3:a:benoitc:hackney:*:*:*:*:*:*:*:*"
+                ],
+                "cwe_ids": [
+                  "CWE-436",
+                  "CWE-918"
+                ]
+              },
+              "details": "## Summary\n\nInterpretation Conflict vulnerability in benoitc hackney allows Server Side Request Forgery. hackney\\_url:normalize/2 URL-decodes the host component after the URL has been parsed into a #hackney\\_url{} record. OTP's uri\\_string:parse/1 and inet:parse\\_address/1 do not decode percent-escapes in the host, so a URL such as http://%31%32%37%2E%30%2E%30%2E%31/ is seen by a caller's allowlist validator with host %31%32%37%2E%30%2E%30%2E%31 (not an IP address), which passes the allowlist check. hackney's normalizer then decodes the host to 127.0.0.1 and opens a TCP connection to loopback. Because hackney:request/5 always calls hackney\\_url:normalize/2 with no opt-out, every request that takes a binary or list URL is affected. The same technique reaches cloud instance metadata services (169.254.169.254), RFC1918 networks, and any admin interface listening on localhost.\n\nThis issue affects hackney: from 0.13.0 before 4.0.1.",
+              "id": "EEF-CVE-2026-47076",
+              "modified": "2026-07-30T18:22:09.935592Z",
+              "published": "2026-05-25T14:00:46.707Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/benoitc/hackney/security/advisories/GHSA-pj7v-xfvx-wmjq"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.erlef.org/cves/CVE-2026-47076.html"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/benoitc/hackney/commit/452620a92ec1da2e6b4862a049a2a4f04b42068f"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://hex.pm/packages/hackney"
+                }
+              ],
+              "schema_version": "1.7.5",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "SSRF allowlist bypass via percent-encoded host in hackney"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/05/GHSA-9fm9-hp7p-53mf/GHSA-9fm9-hp7p-53mf.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "hackney",
+                    "purl": "pkg:hex/hackney"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.24.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.15.0",
+                    "0.15.2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.16.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.23.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.5.6",
+                    "1.5.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.8.6",
+                    "1.9.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-3864"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-772"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-05-28T16:08:47Z",
+                "nvd_published_at": "2025-05-28T12:15:19Z",
+                "severity": "LOW"
+              },
+              "details": "Hackney fails to properly release HTTP connections to the pool after handling 307 Temporary Redirect responses. Remote attackers can exploit this to exhaust connection pools, causing denial of service in applications using the library.\nFix for this issue has been included in 1.24.0 release.",
+              "id": "GHSA-9fm9-hp7p-53mf",
+              "modified": "2026-02-03T03:05:21.255910Z",
+              "published": "2025-05-28T12:30:34Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-3864"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/issues/717"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/commit/8f13ddac50d1626f8b9a47a08bd599e4efe1773d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert.pl/en/posts/2025/05/CVE-2025-3864"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/benoitc/hackney"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Hackney fails to properly release HTTP connections to the pool"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-gp9c-pm5m-5cxr/GHSA-gp9c-pm5m-5cxr.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "hackney",
+                    "purl": "pkg:hex/hackney"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.10.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.15.0",
+                    "0.15.2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.16.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.23.0",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.25.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.5.6",
+                    "1.5.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.8.6",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "2.0.1",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.2.0",
+                    "3.2.1",
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-47071",
+                "EEF-CVE-2026-47071"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-06-26T21:53:50Z",
+                "nvd_published_at": "2026-05-25T15:16:22Z",
+                "severity": "HIGH"
+              },
+              "details": "### Summary\n\nThe SOCKS5 transport in `src/hackney_socks5.erl` correctly applies the caller-supplied timeout to the SOCKS5 negotiation phase, but then upgrades the tunnel to TLS using `ssl:connect/2` (the two-argument form), which defaults to `infinity`. The `Timeout` value is in scope at that call site but is never forwarded. A hostile or man-in-the-middled SOCKS5 proxy that completes the SOCKS5 handshake normally and then stalls the TLS exchange will pin the connecting Erlang process and socket indefinitely, regardless of any `connect_timeout` or `recv_timeout` options the caller set.\n\n### Details\n\nIn `src/hackney_socks5.erl`, line 65, after the SOCKS5 negotiation succeeds, the code calls:\n\n```erlang\nssl:connect(Socket, SSLOpts)\n```\n\nThe three-argument form `ssl:connect/3` takes a timeout; the two-argument form used here defaults to `infinity`. The variable `Timeout` (already used for SOCKS5 recv calls earlier in the same function) is simply not passed. The bytes that drive the TLS handshake on the upstream side of the tunnel come from whatever endpoint the proxy connects to. A hostile proxy can complete SOCKS5 normally, then either stay silent or send a partial `ServerHello` and stop, keeping `ssl:connect/2` blocked forever. No certificate forgery is needed.\n\n### PoC\n\n1. Stand up a SOCKS5 proxy that completes the SOCKS5 greeting and CONNECT reply normally, then goes silent (never sends a TLS ServerHello).\n2. Issue an HTTPS request through it via hackney with `connect_timeout` and `recv_timeout` set to a short value (e.g. 2000 ms).\n3. Observe the calling process remains blocked well past the configured timeout, consuming a process and socket until killed externally.\n\n### Impact\n\nDenial of service via unbounded process and socket consumption. Affects hackney 0.10.0 through 4.0.0 for any HTTPS request routed through a SOCKS5 proxy. The `connect_timeout` and `recv_timeout` options give a false sense of safety since they are not honored during the TLS upgrade. CVSS v4.0: **8.2 (HIGH)**.\n\n## Resources\n\n* Introduction commit: https://github.com/benoitc/hackney/commit/34cdbd1d20a282aacc286a89327465a3925b4c5d\n* Patch commit: https://github.com/benoitc/hackney/commit/5ccdab725c561a6f03d05a51f2d0664f98236dae",
+              "id": "GHSA-gp9c-pm5m-5cxr",
+              "modified": "2026-06-26T22:00:09.488268960Z",
+              "published": "2026-06-26T21:53:50Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/security/advisories/GHSA-gp9c-pm5m-5cxr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47071"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/commit/5ccdab725c561a6f03d05a51f2d0664f98236dae"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.erlef.org/cves/CVE-2026-47071.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/benoitc/hackney"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://osv.dev/vulnerability/EEF-CVE-2026-47071"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Hackney: `ssl:connect/2` post-handshake upgrade has no timeout"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-j9wq-vxxc-94wf/GHSA-j9wq-vxxc-94wf.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "hackney",
+                    "purl": "pkg:hex/hackney"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.15.0",
+                    "0.15.2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.16.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.23.0",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.25.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.5.6",
+                    "1.5.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.8.6",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "2.0.1",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.2.0",
+                    "3.2.1",
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-47075",
+                "EEF-CVE-2026-47075"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-93"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-06-26T21:58:59Z",
+                "nvd_published_at": "2026-05-25T15:16:22Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n`hackney_url:make_url/3` passes the URL query component directly into the HTTP/1.1 request target without percent-encoding `\\r` or `\\n`. RFC 3986 §3.4 requires characters outside the query grammar to be percent-encoded, but no validation or escaping occurs. An attacker who controls any portion of the URL passed to hackney can inject raw CRLF sequences into the request line, enabling HTTP header injection or full request splitting.\n\n### Details\n\n`hackney_url:make_url/3` in `src/hackney_url.erl` builds the request target by concatenating the path and query binaries. The query string is used as-is — no character-class check, no percent-encoding of `\\r` or `\\n`. When hackney serializes the request, the query value lands verbatim in the `GET <path>?<query> HTTP/1.1\\r\\n` request line. A query value containing `\\r\\n` terminates the request line early; subsequent bytes are parsed by the server (or any intermediary proxy) as additional header lines or a second request.\n\nA concrete example: a URL with query `?q=x HTTP/1.1\\r\\nX-Injected: yes\\r\\nX:` produces the following on the wire:\n\n```\nGET /?q=x HTTP/1.1\nX-Injected: yes\nX: HTTP/1.1\nHost: ...\n```\n\nThe server sees `X-Injected: yes` as a legitimate request header that the client never intended to send.\n\n### PoC\n\n1. Listen on a raw TCP port: `nc -lvnp 8080`.\n2. Issue: `:hackney.get(\"http://127.0.0.1:8080/?q=x HTTP/1.1\\r\\nX-Injected: yes\\r\\nX:\")`.\n3. Observe the listener receives `X-Injected: yes` as a standalone header line in the request.\n\n### Impact\n\nHTTP header injection and request splitting against any server hackney connects to. Affects all released versions of hackney before 4.0.1. Exploitation requires an attacker-controlled URL (or URL component) to reach hackney without prior sanitization. Consequences include injecting arbitrary headers (`Authorization`, `Host`, `X-Forwarded-For`) and splitting requests through proxies. CVSS v4.0: **6.8 (MEDIUM)**.\n\n## Resources\n\n* Introduction commit: https://github.com/benoitc/hackney/commit/8bb1a359a81ae58567c84f8d24564e9742e6f2bd\n* Patch commit: https://github.com/benoitc/hackney/commit/ca73dd0aba0ed557449c18288bf07241671a43c9",
+              "id": "GHSA-j9wq-vxxc-94wf",
+              "modified": "2026-06-26T22:00:10.561300666Z",
+              "published": "2026-06-26T21:58:59Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/security/advisories/GHSA-j9wq-vxxc-94wf"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47075"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/commit/ca73dd0aba0ed557449c18288bf07241671a43c9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.erlef.org/cves/CVE-2026-47075.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/benoitc/hackney"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://osv.dev/vulnerability/EEF-CVE-2026-47075"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:A/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Hackney has CR/LF injection in query parameter"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-mp55-p8c9-rfw2/GHSA-mp55-p8c9-rfw2.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "hackney",
+                    "purl": "pkg:hex/hackney"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.9.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.15.0",
+                    "0.15.2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.16.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.23.0",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.25.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.5.6",
+                    "1.5.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.8.6",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "2.0.1",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.2.0",
+                    "3.2.1",
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-47069",
+                "EEF-CVE-2026-47069"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-93"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-06-26T21:54:19Z",
+                "nvd_published_at": "2026-05-25T15:16:21Z",
+                "severity": "LOW"
+              },
+              "details": "### Summary\n\nCRLF injection in `hackney_cookie:setcookie/3` (`src/hackney_cookie.erl`). The function validates `Name` and `Value` against CR/LF and control characters but concatenates the `domain` and `path` options verbatim into the output binary. If either option carries attacker-controlled data, a `Host` header forwarded as the cookie domain, a request URI forwarded as the cookie path, a `\\r\\n` in the value splits the `Set-Cookie` header and lets the attacker inject additional headers into the HTTP response.\n\n### Details\n\n**1. Asymmetric validation**\n\nLines 27–34 of `hackney_cookie.erl` run `binary:match` on `Name` and `Value`, rejecting `=`, `,`, `;`, whitespace, `\\r`, `\\n`, `\\013`, and `\\014`. The `Domain` and `Path` options (lines 47 and 51) skip this check entirely and land straight in the result iolist:\n\n```erlang\n[<<\"; Domain=\">>, Domain]\n[<<\"; Path=\">>,   Path]\n```\n\n`iolist_to_binary(...)` on line 63 flattens everything and returns it to the caller.\n\n**2. Injection**\n\nA `Path` of `<<\"/x\\r\\nSet-Cookie: admin=1; Path=/\">>` produces a binary with a literal `\\r\\n`. Written into a `Set-Cookie` response header, the receiving HTTP parser splits it into two headers — one legitimate, one attacker-controlled.\n\n**3. Realistic trigger**\n\nCommon patterns: keying the cookie domain off `Host`, deriving the path from the request URI, or copying a `Location` path into a cookie. Any of these lets a remote attacker control the injected content.\n\n### PoC\n\n1. Call `hackney_cookie:setcookie(<<\"sid\">>, <<\"abc\">>, [{path, <<\"/x\\r\\nSet-Cookie: admin=1; Path=/\">>}])`.\n2. The returned binary contains a literal `\\r\\n` followed by a second `Set-Cookie:` line.\n3. Write the result into a `Set-Cookie` response header — the client parses two headers, including `admin=1`.\n\n### Impact\n\nCookie injection / HTTP response splitting at the `hackney_cookie` API boundary. Affects hackney 0.9.0 through 4.0.0 wherever `domain` or `path` options are populated from request data. Exploitation can overwrite session/auth cookies, fix cookies, or strip `Secure`/`HttpOnly` flags. CVSS v4.0: **2.1 (LOW)** — requires attacker-controlled input to reach the `domain` or `path` option.\n\n## Resources\n\n* Introduction commit: https://github.com/benoitc/hackney/commit/602d5c7f2ea4acbc83ed75230655d935a0750ebc\n* Patch commit: https://github.com/benoitc/hackney/commit/8e02b99c28aea1b3fa2ddc0e66f51fe5bb0ac540",
+              "id": "GHSA-mp55-p8c9-rfw2",
+              "modified": "2026-06-26T22:00:10.691062066Z",
+              "published": "2026-06-26T21:54:19Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/security/advisories/GHSA-mp55-p8c9-rfw2"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47069"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/commit/8e02b99c28aea1b3fa2ddc0e66f51fe5bb0ac540"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.erlef.org/cves/CVE-2026-47069.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/benoitc/hackney"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://osv.dev/vulnerability/EEF-CVE-2026-47069"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Hackney has CRLF / header injection via unvalidated `domain` and `path` options"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2026/06/GHSA-pj7v-xfvx-wmjq/GHSA-pj7v-xfvx-wmjq.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "hackney",
+                    "purl": "pkg:hex/hackney"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0.13.0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.15.0",
+                    "0.15.2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.16.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.23.0",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.25.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.5.6",
+                    "1.5.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.8.6",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0-beta.1",
+                    "2.0.1",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.2.0",
+                    "3.2.1",
+                    "4.0.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-47076",
+                "EEF-CVE-2026-47076"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-436",
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2026-06-26T21:54:55Z",
+                "nvd_published_at": "2026-05-25T15:16:22Z",
+                "severity": "MODERATE"
+              },
+              "details": "### Summary\n\n`hackney_url:normalize/2` URL-decodes the host component of a parsed URL, but the caller's SSRF allowlist runs before normalization using OTP's `uri_string:parse/1` and `inet:parse_address/1`, neither of which decodes percent-escapes in hostnames. A URL like `http://%31%32%37%2E%30%2E%30%2E%31/` presents an encoded, non-IP-looking host to the validator, which passes the allowlist check; hackney's normalizer then decodes it to `127.0.0.1` and connects to loopback. Because `hackney:request/5` always calls `normalize/2` with no opt-out, every request path that accepts a binary or list URL is affected. This is a parser-differential SSRF in the same class as CVE-2025-1211, but in a different function.\n\n### Details\n\nIn `src/hackney_url.erl` (lines 161–186), `normalize/2` checks whether the parsed host is already a dotted-quad or IPv6 literal via `inet_parse:address/1`. Percent-encoded forms like `%31%32%37%2E%30%2E%30%2E%31` fail that check and fall into the catch-all branch, where `urldecode/1` decodes the host before passing it to IDNA conversion:\n\n```erlang\nHost1 = binary_to_list(\n           urldecode(unicode:characters_to_binary(Host0))\n         ),\n```\n\nThe decoded host (`\"127.0.0.1\"`) replaces the original in the returned `#hackney_url{}` record. `hackney:request/5` at `src/hackney.erl:463` always calls `normalize/2`, so the decoded host is what `do_dispatch/1` and `add_host_header/2` ultimately use. The on-wire `Host:` header and the TCP connect target both reflect the decoded value.\n\nThe same payload pattern reaches the AWS/GCP/Azure IMDS (`169.254.169.254`), RFC1918 ranges, and any `localhost` admin endpoint. The 1.21.0 patch for CVE-2025-1211 fixed a separate differential in `parse_url/1` and did not touch `normalize/2`.\n\n### PoC\n\n1. Validate the URL with the canonical Erlang SSRF allowlist: `uri_string:parse/1` returns host `<<\"%31%32%37%2E%30%2E%30%2E%31\">>`, `inet:parse_address/1` returns `{error, einval}`, so the allowlist accepts it.\n2. Pass the same URL to `hackney:get/1`.\n3. hackney's `normalize/2` decodes the host to `\"127.0.0.1\"` and connects to `127.0.0.1:80`. The internal service receives the request with `Host: 127.0.0.1`.\n\n### Impact\n\nUnauthenticated SSRF bypassing the canonical Erlang allowlist pattern. Affects hackney 0.13.0 through 4.0.0 for any application that accepts attacker-supplied URLs. Targets include cloud IMDS endpoints, `localhost` admin interfaces, and RFC1918 backends. CVSS v4.0: **6.9 (MEDIUM)**.\n\n## Resources\n\n* Introduction commit: https://github.com/benoitc/hackney/commit/4d725507588942fd00efca15b86da3273656510a\n* Patch commit: https://github.com/benoitc/hackney/commit/452620a92ec1da2e6b4862a049a2a4f04b42068f",
+              "id": "GHSA-pj7v-xfvx-wmjq",
+              "modified": "2026-06-26T22:00:10.982884294Z",
+              "published": "2026-06-26T21:54:55Z",
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/security/advisories/GHSA-pj7v-xfvx-wmjq"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47076"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/commit/452620a92ec1da2e6b4862a049a2a4f04b42068f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.erlef.org/cves/CVE-2026-47076.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/benoitc/hackney"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://osv.dev/vulnerability/EEF-CVE-2026-47076"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Hackney has SSRF allowlist bypass in hackney_url:normalize/2 via percent-encoded host"
+            },
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2025/02/GHSA-vq52-99r9-h5pw/GHSA-vq52-99r9-h5pw.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "hackney",
+                    "purl": "pkg:hex/hackney"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.21.0"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.15.0",
+                    "0.15.2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.14.0",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.16.0",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.5.6",
+                    "1.5.7",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.8.6",
+                    "1.9.0"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2025-1211"
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2025-02-11T17:59:52Z",
+                "nvd_published_at": "2025-02-11T05:15:14Z",
+                "severity": "LOW"
+              },
+              "details": "Versions of the package hackney from 0.0.0 are vulnerable to Server-side Request Forgery (SSRF) due to improper parsing of URLs by URI built-in module and hackey. Given the URL http://127.0.0.1?@127.2.2.2/, the URI function will parse and see the host as 127.0.0.1 (which is correct), and hackney will refer the host as 127.2.2.2/. This vulnerability can be exploited when users rely on the URL function for host checking.",
+              "id": "GHSA-vq52-99r9-h5pw",
+              "modified": "2025-12-10T00:40:06.233307Z",
+              "published": "2025-02-11T06:30:27Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1211"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/commit/9594ce58fabd32cd897fc28fae937694515a3d4a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/snoopysecurity/996de09ec0cfd0ebdcfdda8ff515deb1"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/benoitc/hackney"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/benoitc/hackney/releases/tag/1.21.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-HEX-HACKNEY-6516131"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf"
+                }
+              ],
+              "schema_version": "1.9.0",
+              "severity": [
+                {
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:L",
+                  "type": "CVSS_V3"
+                },
+                {
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:L/SI:L/SA:L/E:P",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "Server-side Request Forgery (SSRF) in hackney"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ssl_verify_fun",
+            "version": "1.1.7",
+            "ecosystem": "Hex",
+            "purl": "pkg:hex/ssl_verify_fun@1.1.7",
+            "commit": "354c321cf377240c7b8716899e182ce4890c5938111a1296add3ec74cf1715df"
+          },
+          "groups": [
+            {
+              "ids": [
+                "EEF-CVE-2026-117666"
+              ],
+              "aliases": [
+                "CVE-2026-117666",
+                "EEF-CVE-2026-117666",
+                "GHSA-7gw2-hphm-c5px"
+              ],
+              "max_severity": "9.1"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "affected": [
+                {
+                  "database_specific": {
+                    "source": "https://cna.erlef.org/osv/EEF-CVE-2026-117666.json"
+                  },
+                  "package": {
+                    "ecosystem": "Hex",
+                    "name": "ssl_verify_fun",
+                    "purl": "pkg:hex/ssl_verify_fun"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "1.0.1"
+                        },
+                        {
+                          "fixed": "1.1.8"
+                        }
+                      ],
+                      "type": "SEMVER"
+                    }
+                  ],
+                  "versions": [
+                    "1.0.8",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7"
+                  ]
+                },
+                {
+                  "database_specific": {
+                    "source": "https://cna.erlef.org/osv/EEF-CVE-2026-117666.json"
+                  },
+                  "ranges": [
+                    {
+                      "events": [
+                        {
+                          "introduced": "a49ca56923356c7a3981692b23c42ef32c2990e0"
+                        },
+                        {
+                          "fixed": "ca34031299cd2e0c98794c0da4ba556b94e39aad"
+                        }
+                      ],
+                      "repo": "https://github.com/deadtrickster/ssl_verify_fun.erl",
+                      "type": "GIT"
+                    }
+                  ],
+                  "versions": [
+                    "1.1.7",
+                    "1.1.6",
+                    "1.1.5",
+                    "1.1.4",
+                    "1.1.3",
+                    "1.1.2",
+                    "1.1.1",
+                    "1.1.0",
+                    "1.0.9",
+                    "1.0.8",
+                    "1.0.6",
+                    "1.0.5",
+                    "1.0.4",
+                    "1.0.3",
+                    "1.0.1"
+                  ]
+                }
+              ],
+              "aliases": [
+                "CVE-2026-117666",
+                "GHSA-7gw2-hphm-c5px"
+              ],
+              "credits": [
+                {
+                  "name": "Andrew Moore",
+                  "type": "FINDER"
+                },
+                {
+                  "name": "Martin Karrer",
+                  "type": "FINDER"
+                },
+                {
+                  "name": "Andrew Moore",
+                  "type": "REPORTER"
+                },
+                {
+                  "name": "Martin Karrer",
+                  "type": "REMEDIATION_DEVELOPER"
+                },
+                {
+                  "name": "deadtrickster",
+                  "type": "REMEDIATION_DEVELOPER"
+                },
+                {
+                  "name": "Jonatan Männchen / EEF",
+                  "type": "COORDINATOR"
+                }
+              ],
+              "database_specific": {
+                "capec_ids": [
+                  "CAPEC-94"
+                ],
+                "cpe_ids": [
+                  "cpe:2.3:a:deadtrickster:ssl_verify_fun:*:*:*:*:*:*:*:*"
+                ],
+                "cwe_ids": [
+                  "CWE-297"
+                ]
+              },
+              "details": "## Summary\n\nImproper Validation of Certificate with Host Mismatch vulnerability in deadtrickster ssl_verify_fun allows an adversary in the middle to impersonate a TLS peer via a certificate that carries a partial-label wildcard. `try_match_wildcard/4` in `src/ssl_verify_hostname.erl` anchors only the text before and after the `*` of an identifier such as `f*.example.net`, so the wildcard also consumes dots and the certificate is accepted for `f.evil.example.net`. RFC 6125 confines a wildcard to the left-most label. The same matcher lets `*.168.1.1` match the IP literal `192.168.1.1`. Whole-label wildcards are matched correctly.\n\nErlang/OTP 20.0 and later check the hostname in `ssl` before a user `verify_fun` sees `valid_peer`, so a client that keeps `server_name_indication` set rejects the mismatch regardless. Exposed are clients that disable SNI, servers that verify client certificate hostnames with this library, and direct callers of `verify_cert_hostname/2`.\n\nThis issue affects ssl_verify_fun: from 1.0.1 before 1.1.8.\n\n## Details\n\n**1. Identifier parsing.** `ssl_verify_hostname:try_match_hostname/2` strips trailing dots, tries an exact case-insensitive match, and otherwise calls `parse_and_validate_wildcard_identifier/2`. That function accepts an identifier with one `*` in the left-most label and at least two labels after it, and classifies it as `SingleCharW` when the label is exactly `*`.\n\n**2. Whole-label wildcard, correct.** For `*.example.net` the matcher compares the text after the `*` with the hostname from its first dot onward, so `a.b.example.net` fails because `.b.example.net` differs from `.example.net`.\n\n**3. Partial-label wildcard, incorrect.** For `f*.example.net` the `SingleCharW` branch is skipped. `try_match_wildcard/4` then checks only that the hostname ends with `.example.net` and starts with `f`. Nothing checks the span consumed by the `*`, so `f.evil.example.net` and `f.a.b.example.net` pass. RFC 6125 section 6.4.3 limits a wildcard to the left-most label. The `wildcard_not_in_a_label/2` guard only rejects internationalized `xn--` labels and does not help.\n\n**4. IP literals.** The reference identifier is treated as a DNS name whatever its shape, so `verify_cert_hostname/2` with hostname `192.168.1.1` matches a `dNSName` of `*.168.1.1` through the whole-label branch. RFC 6125 does not apply wildcard matching to IP addresses, and OTP's `ssl` converts an IP-literal string to an `{ip, ...}` reference that only matches `iPAddress` entries.\n\n**5. Interaction with Erlang/OTP.** When `ssl_verify_hostname:verify_fun/3` is used as `verify_fun`, OTP 20.0 and later call `ssl_certificate:validate/4` for `valid_peer` before the user fun. In the client role with `server_name_indication` set to a hostname, or with a peer IP from a socket upgrade, OTP runs `public_key:pkix_verify_hostname/3` and hands the user fun `{bad_cert, hostname_check_failed}` instead of `valid_peer`, which ssl_verify_fun turns into `{fail, ...}`. OTP's default match function allows no wildcards, and its `https` match function (`public_key:pkix_verify_hostname_match_fun/1`) splits both names on dots and matches the wildcard within the first label only. The ssl_verify_fun result therefore decides the outcome only with `{server_name_indication, disable}`, in the server role, on direct calls to `verify_cert_hostname/2`, or on OTP older than 20.0.\n\n## Proof of concept\n\n1. Issue a leaf certificate whose only `subjectAltName` entry is `dNSName` `f*.example.net`, for example with `public_key:pkix_test_data/1`, and decode it with `public_key:pkix_decode_cert(Der, otp)`.\n2. Call `ssl_verify_hostname:verify_cert_hostname(Cert, \"foo.example.net\")`. It returns `{valid, \"foo.example.net\"}`, as expected.\n3. Call `ssl_verify_hostname:verify_cert_hostname(Cert, \"f.evil.example.net\")`. It returns `{valid, \"f.evil.example.net\"}` although the hostname spans two labels where the wildcard sits.\n4. Call `ssl_verify_hostname:verify_cert_hostname(Cert, \"a.b.example.net\")` as a control. It returns `{fail, unable_to_match_altnames}`.\n5. For the IP-literal variant, issue a leaf with `dNSName` `*.168.1.1` and call `verify_cert_hostname(Cert, \"192.168.1.1\")`. It returns `{valid, \"192.168.1.1\"}`.\n6. To observe the full TLS path, serve the first certificate from `ssl:listen/2` and connect with `{verify, verify_peer}`, the CA in `cacerts`, `{verify_fun, {fun ssl_verify_hostname:verify_fun/3, [{check_hostname, \"f.evil.example.net\"}]}}` and `{server_name_indication, disable}`. The handshake succeeds. With `{server_name_indication, \"f.evil.example.net\"}` instead, OTP 20.0 or later rejects the certificate with `hostname_check_failed` before ssl_verify_fun runs.\n\n## Impact\n\nA holder of a certificate for `f*.example.net` from a CA the client trusts can impersonate any host named `f.<label>.example.net` to a client that relies on ssl_verify_fun alone for hostname verification, and read or alter the traffic of that connection.\n\n## Workarounds\n\nOn Erlang/OTP 21 or later, keep `server_name_indication` set to the target hostname and pass `{customize_hostname_check, [{match_fun, public_key:pkix_verify_hostname_match_fun(https)}]}` in the `ssl` options. The hostname check in `ssl` then rejects the mismatch before ssl_verify_fun runs, and legitimate wildcard certificates continue to match. hackney and tls_certificate_check already set both options.\n\n## Configurations\n\nssl_verify_fun decides the outcome only where it is the sole hostname check. Erlang/OTP 20.0 and later verify the hostname in `ssl` before the user `verify_fun` is called with `valid_peer`, as long as `server_name_indication` is a hostname or the connection was upgraded from a socket. A deployment is exposed when it sets `{server_name_indication, disable}`, when a TLS server uses `ssl_verify_hostname:verify_fun/3` to verify client certificates, when it calls `ssl_verify_hostname:verify_cert_hostname/2` directly, or when it runs Erlang/OTP older than 20.0. The attacker also needs a certificate with a partial-label wildcard from a CA the client trusts, which the CA/Browser Forum Baseline Requirements do not allow, so the realistic exposure is private PKI.",
+              "id": "EEF-CVE-2026-117666",
+              "modified": "2026-10-30T20:41:08.976521139Z",
+              "published": "2026-10-30T20:22:16.466Z",
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/deadtrickster/ssl_verify_fun.erl/security/advisories/GHSA-7gw2-hphm-c5px"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cna.erlef.org/cves/CVE-2026-117666.html"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/deadtrickster/ssl_verify_fun.erl/pull/33"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/deadtrickster/ssl_verify_fun.erl/commit/a49ca56923356c7a3981692b23c42ef32c2990e0"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/deadtrickster/ssl_verify_fun.erl/commit/ca34031299cd2e0c98794c0da4ba556b94e39aad"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://hex.pm/packages/ssl_verify_fun"
+                }
+              ],
+              "schema_version": "1.9.2",
+              "severity": [
+                {
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+                  "type": "CVSS_V4"
+                }
+              ],
+              "summary": "ssl_verify_fun: partial-label wildcard certificate matches hostnames across a label boundary"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}
