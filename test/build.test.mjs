@@ -7,9 +7,12 @@
 //         ssl_verify_fun 1.1.7, with that project's `mix hex.audit` output,
 //         and a real app's `mix deps.tree`
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { describe, it } from 'node:test';
-import { buildReport, compare, hexDirect, npmDirect, retiredPackages } from '../build.mjs';
+import { buildReport, compare, hexDirect, npmDirect, readDir, retiredPackages } from '../build.mjs';
 import { problems } from './contract.mjs';
 
 const fixture = (f) => readFileSync(new URL(`fixtures/${f}`, import.meta.url), 'utf8');
@@ -122,5 +125,47 @@ describe('edge cases', () => {
     assert.deepEqual(retiredPackages('Retired:\n  a_pkg 2.0.0 - (security) Do not use\n  b 1.0.0-rc.1 - (other)\n\nAdvisories:\n  c 1.0.0 - X\n'),
       [{ package: 'a_pkg', version: '2.0.0', reason: '(security) Do not use' }, { package: 'b', version: '1.0.0-rc.1', reason: '(other)' }]);
     assert.deepEqual(retiredPackages('No retired or security advisory packages found\n'), []);
+  });
+});
+
+// Forgejo's runner runs actions from /var/run/act/..., and /var/run is a
+// symlink to /run. Run that way, build.mjs once printed nothing at all.
+describe('run as a script', () => {
+  it('prints the report when run through a symlinked directory', () => {
+    const tmp = mkdtempSync(join(tmpdir(), 'aftercare-'));
+    try {
+      mkdirSync(join(tmp, 'real'));
+      cpSync(new URL('../build.mjs', import.meta.url), join(tmp, 'real', 'build.mjs'));
+      symlinkSync(join(tmp, 'real'), join(tmp, 'link'));
+      mkdirSync(join(tmp, 'out'));
+      writeFileSync(join(tmp, 'out', 'osv.exit'), '0\n');
+      writeFileSync(join(tmp, 'out', 'osv.json'), '{"results":[]}');
+      const out = execFileSync(process.execPath, [join(tmp, 'link', 'build.mjs'), join(tmp, 'out'), RUN, COMMIT], { encoding: 'utf8' });
+      assert.deepEqual(JSON.parse(out), { status: 'clear', run_url: RUN, commit: COMMIT, findings: [] });
+    } finally {
+      rmSync(tmp, { recursive: true, force: true });
+    }
+  });
+});
+
+// readDir reads report.sh's files from <dir>, but the lockfile from where the
+// caller named it. It once looked for the lockfile inside <dir>, so every npm
+// finding said "can't tell" (null) for direct.
+describe('readDir', () => {
+  it('finds the npm lockfile relative to the working directory', () => {
+    const tmp = mkdtempSync(join(tmpdir(), 'aftercare-'));
+    try {
+      writeFileSync(join(tmp, 'osv.exit'), '1\n');
+      writeFileSync(join(tmp, 'osv.json'), fixture('npm/osv.json'));
+      writeFileSync(join(tmp, 'lockfiles.txt'), 'test/fixtures/npm/package-lock.json\n');
+      const cwd = process.cwd();
+      process.chdir(new URL('..', import.meta.url).pathname);
+      let report;
+      try { report = buildReport(readDir(tmp), RUN, COMMIT); } finally { process.chdir(cwd); }
+      const direct = Object.fromEntries(report.findings.map((f) => [f.package, f.direct]));
+      assert.deepEqual(direct, { lodash: true, minimist: false });
+    } finally {
+      rmSync(tmp, { recursive: true, force: true });
+    }
   });
 });

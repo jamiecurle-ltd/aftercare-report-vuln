@@ -15,9 +15,9 @@
 // Aftercare keeps showing the last known findings.
 //
 // Plain Node, no dependencies, nothing newer than Node 20.
-import { existsSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { existsSync, readFileSync, realpathSync } from 'node:fs';
+import { isAbsolute, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 // Compares versions numerically: "1.2.10" is [1, 2, 10]. A pre-release
 // ("1.2.3-rc.1") comes before its release, as in semver.
@@ -134,15 +134,17 @@ export function buildReport({ osv, direct = {}, retired = [] }, runUrl, commit) 
 export function readDir(dir) {
   const file = (f) => join(dir, f);
   const text = (f) => (existsSync(file(f)) ? readFileSync(file(f), 'utf8') : null);
-  const json = (f) => { try { return JSON.parse(readFileSync(file(f), 'utf8')); } catch { return null; } };
+  // Paths are as given: files in <dir> are joined with it by the callers.
+  const json = (path) => { try { return JSON.parse(readFileSync(path, 'utf8')); } catch { return null; } };
 
   const code = text('osv.exit')?.trim();
-  const osv = code === '0' || code === '1' ? json('osv.json') : null;
+  const osv = code === '0' || code === '1' ? json(file('osv.json')) : null;
 
   const direct = {};
   for (const lockfile of (text('lockfiles.txt') ?? '').split('\n').filter(Boolean)) {
     if (lockfile.endsWith('package-lock.json')) {
-      const lock = json(lockfile.startsWith('/') ? lockfile : join(process.cwd(), lockfile));
+      // The caller's lockfile, relative to the working directory, not <dir>.
+      const lock = json(isAbsolute(lockfile) ? lockfile : join(process.cwd(), lockfile));
       if (lock) direct.npm = new Set([...(direct.npm ?? []), ...npmDirect(lock)]);
     }
   }
@@ -153,8 +155,10 @@ export function readDir(dir) {
   return { osv, direct, retired: hexAudit ? retiredPackages(hexAudit) : [] };
 }
 
-// Run as a script (not when the tests import it).
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+// Run as a script (not when the tests import it). Node gives this module its
+// real path, so compare against the real path of what was run: Forgejo's
+// runner runs actions from /var/run/act/..., and /var/run is a symlink to /run.
+if (process.argv[1] && realpathSync(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const [dir, runUrl, commit] = process.argv.slice(2);
   console.log(JSON.stringify(buildReport(readDir(dir), runUrl, commit)));
 }
