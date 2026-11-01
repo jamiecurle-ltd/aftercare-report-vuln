@@ -1,0 +1,4 @@
+%{
+  "hackney": {:hex, :hackney, "1.6.4", "6363480405ae4b1d03d6233f32792f0c3cf765396cfdb7e1d07cab3d3e41c53c", [:rebar3], [], "hexpm", "b38a83086a91f4cbdda796d193bef29917c1f48b5131c7cef057a31ad8535233"},
+  "ssl_verify_fun": {:hex, :ssl_verify_fun, "1.1.7", "354c321cf377240c7b8716899e182ce4890c5938111a1296add3ec74cf1715df", [:make, :mix, :rebar3], [], "hexpm", "fe4c190e8f37401d30167c8c405eda19469f34577987c76dde613e838bbc67f8"},
+}

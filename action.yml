@@ -1,0 +1,51 @@
+name: Aftercare vulnerability report
+description: >-
+  Scans your lockfiles with OSV-Scanner and reports the advisories to
+  Aftercare (aftercare.jamiecurle.ltd), which shows them on your sites'
+  dashboard. Read-only: it never changes your code or dependencies.
+author: jamiecurle.ltd
+
+inputs:
+  token:
+    description: >-
+      This repo's Aftercare token (keep it in a secret, e.g. AFTERCARE_TOKEN).
+      It can only report this repo's dependency audit; nothing else.
+    required: true
+  lockfile:
+    description: >-
+      The lockfile(s) to scan, one per line, relative to the working directory:
+      mix.lock, package-lock.json, poetry.lock, composer.lock, Gemfile.lock,
+      go.sum, Cargo.lock, ... (anything OSV-Scanner reads).
+    required: true
+  hex-retired:
+    description: >-
+      Elixir only: also report retired Hex packages, from `mix hex.audit`.
+      Needs mix and the dependencies fetched (mix deps.get) before this step.
+    required: false
+    default: 'false'
+  url:
+    description: Aftercare's address. Only change this for testing.
+    required: false
+    default: https://aftercare.jamiecurle.ltd
+  run-url:
+    description: The link shown next to the report. Defaults to this run.
+    required: false
+    default: ''
+  commit:
+    description: The commit scanned. Defaults to this run's commit.
+    required: false
+    default: ''
+
+runs:
+  using: composite
+  steps:
+    - name: Report dependency advisories to Aftercare
+      shell: bash
+      env:
+        AFTERCARE_TOKEN: ${{ inputs.token }}
+        LOCKFILES: ${{ inputs.lockfile }}
+        HEX_RETIRED: ${{ inputs.hex-retired }}
+        AFTERCARE_URL: ${{ inputs.url }}
+        RUN_URL: ${{ inputs.run-url }}
+        COMMIT: ${{ inputs.commit }}
+      run: '"${{ github.action_path }}/report.sh"'

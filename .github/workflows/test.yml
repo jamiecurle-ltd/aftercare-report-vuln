@@ -1,0 +1,122 @@
+name: Test
+
+# Every push and PR: the report builder's unit tests, then the action itself,
+# run for real (uses: ./) on Linux x64, Linux arm64 and macOS against a
+# stand-in Aftercare (test/fake-aftercare.mjs) that checks each report the way
+# the real one does. Nothing here talks to the real Aftercare.
+#
+# Actions are pinned to commit SHAs, with the release in a trailing comment,
+# so a moved tag can't change what runs.
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    name: Unit tests (Node ${{ matrix.node }})
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        # 20 is the oldest Node the action supports (Debian's, in Forgejo
+        # containers); 24 is current.
+        node: ['20', '24']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ matrix.node }}
+      - run: node --test test/build.test.mjs
+
+  action:
+    name: The action (${{ matrix.os }})
+    needs: unit
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, ubuntu-24.04-arm, macos-15]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Start the fake Aftercare
+        run: |
+          node test/fake-aftercare.mjs 8811 aft_test "$RUNNER_TEMP/aftercare.log" &
+          for i in $(seq 20); do curl -sf -o /dev/null http://127.0.0.1:8811/health && break; sleep 0.5; done
+
+      - name: npm lockfile
+        uses: ./
+        with:
+          token: aft_test
+          lockfile: test/fixtures/npm/package-lock.json
+          url: http://127.0.0.1:8811
+
+      - name: Hex lockfile
+        uses: ./
+        with:
+          token: aft_test
+          lockfile: test/fixtures/hex/mix.lock
+          url: http://127.0.0.1:8811
+
+      - name: Both at once
+        uses: ./
+        with:
+          token: aft_test
+          lockfile: |
+            test/fixtures/npm/package-lock.json
+            test/fixtures/hex/mix.lock
+          url: http://127.0.0.1:8811
+
+      # A lockfile that isn't there: the report must say 'error', not 'clear'.
+      - name: Missing lockfile
+        uses: ./
+        with:
+          token: aft_test
+          lockfile: nope/mix.lock
+          url: http://127.0.0.1:8811
+
+      # A wrong token: Aftercare refuses it, and the step must fail.
+      - name: Wrong token
+        id: wrong-token
+        continue-on-error: true
+        uses: ./
+        with:
+          token: aft_wrong
+          lockfile: test/fixtures/npm/package-lock.json
+          url: http://127.0.0.1:8811
+      - name: The wrong token failed the step
+        run: test "${{ steps.wrong-token.outcome }}" = failure
+
+      - name: Check what Aftercare received
+        run: node test/check-log.mjs "$RUNNER_TEMP/aftercare.log" 204:vulnerable:6 204:vulnerable:7 204:vulnerable:13 204:error:0 401
+
+  hex-retired:
+    name: The action with hex-retired (Elixir)
+    needs: unit
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: erlef/setup-beam@54075bcc5e249e4758d363f27d099f55d843f124 # v1.24.1
+        with:
+          otp-version: '28'
+          elixir-version: '1.19'
+      - name: Fetch the fixture project's dependencies
+        working-directory: test/fixtures/hex
+        run: mix deps.get
+      - name: Start the fake Aftercare
+        run: |
+          node test/fake-aftercare.mjs 8811 aft_test "$RUNNER_TEMP/aftercare.log" &
+          for i in $(seq 20); do curl -sf -o /dev/null http://127.0.0.1:8811/health && break; sleep 0.5; done
+      # Run from the project, as a real Elixir repo's workflow would.
+      - name: Hex lockfile, with retired packages
+        uses: ./
+        with:
+          token: aft_test
+          lockfile: test/fixtures/hex/mix.lock
+          hex-retired: 'true'
+          url: http://127.0.0.1:8811
+      - name: Check what Aftercare received (the advisories plus RETIRED-hackney)
+        run: |
+          node test/check-log.mjs "$RUNNER_TEMP/aftercare.log" 204:vulnerable:8
+          grep -q '"RETIRED-hackney"' "$RUNNER_TEMP/aftercare.log"
