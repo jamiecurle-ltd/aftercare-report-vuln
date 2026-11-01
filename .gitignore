@@ -1,0 +1,4 @@
+node_modules/
+.DS_Store
+test/fixtures/hex/deps/
+test/fixtures/hex/_build/
